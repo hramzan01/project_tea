@@ -1,0 +1,27 @@
+#images_controls {
+  text-align:center;
+}
+#images_controls span {
+  padding-right:2em;
+  cursor:pointer;
+}
+
+#images {
+    position:relative;
+    height:281px;
+    width:450px;
+    margin:0 auto 10px;
+  }
+
+  #images img {
+    position:absolute;
+    left:0;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+    filter: alpha(opacity=0);
+  }
+  
+  #images img.opaque {
+    opacity:1;
+    filter: alpha(opacity=1);
+  }
