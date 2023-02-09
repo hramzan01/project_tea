@@ -1,10 +1,9 @@
 var myImage = document.getElementById('startImg');
 var myStep = document.getElementById('title')
 var myProcess = document.getElementById('process')
-var imageArray = ['img/teaCup.svg','img/teaBag.svg','img/teaBlack.svg','img/teaMilk.svg','img/teaMix.svg'];
+var imageArray = ['img/teaBag.svg','img/teaBlack.svg','img/teaMilk.svg','img/teaMix.svg','img/teaCup.svg'];
 var processArray = ['get cup','put in the teabag','pour hot water','add milk','mix it up'];
 var stepArray = ['Step One','Step Two','Step Three','Step Four','Step Five'];
-
 var arrayIndex = 0
 
 function changeImage() {
