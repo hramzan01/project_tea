@@ -1,5 +1,5 @@
 :root {
-	padding: 30%;
+	padding: 10%;
 	text-align: center;
 	font-size: x-large;
 }
@@ -10,29 +10,34 @@
 
 #button {
 	text-align: center;
-	padding: 30px;
+	padding: 8%;
 }
 
 .selected {
-	padding: 10px;
-	border-radius: 20px;
-	width: 10vw;
+	padding: 2%;
+	border-radius: 5%;
+	width: 30vw;
 	cursor: pointer;
+	align-items: center;
+	text-align: center;
+}
+
+#startImg {
+	width: 40vw;
+	height: 20vh;
+	align-content: center;
 }
 
 #images_controls span {
-	padding: 150px;
 	cursor: pointer;
 }
 
 #images {
 	display: inline-block;
 	position: relative;
-	height: 281px;
-	width: 450px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 30%;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 25%;
 	text-align: center;
 }
 
