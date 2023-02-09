@@ -1,20 +1,27 @@
-// var myImage = document.getElementById('mainImage');
-// var imageArray = ['img/teaCup.svg','img/teaBag.svg','img/teaBlack.svg','img/teaMilk.svg','img/teaMix.svg'];
-// var imageIndex = 0
+var myImage = document.getElementById('1');
+var imageArray = [1,2,3,4];
+var imageIndex = 0
+var button = document.querySelector('#button');
 
-// function changeImage() {
-//     myImage.setAttribute ('src',imageArray[imageIndex]);
-//     imageIndex = (imageIndex + 1) % imageArray.length;
-// }
+function changeImage() {
+    myImage.classList.remove ('opaque');
+    imageIndex = (imageIndex + 1) % imageArray.length;
+}
 
-// document.addEventListener('DOMContentLoaded', function () {
-// 	var button = document.querySelector('#button');
-// 	button.addEventListener('click', function () {
-// 		changeImage();
-// 	});
-// });
+document.addEventListener('DOMContentLoaded', function () {
+		button.addEventListener('click', function () {
+        console.log(imageIndex);
+		changeImage();
+	});
+});
 
-// conver the below jquery to vanilla javascript!!
+
+
+
+
+
+// convert the below jquery to vanilla javascript!!
+
 // $(document).ready(function() {
 //   $("#images_controls").on('click', 'span', function() {
 //     $("#images img").removeClass("opaque");
