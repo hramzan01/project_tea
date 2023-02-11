@@ -1,22 +1,43 @@
-var myImage = document.getElementById('startImg');
-var myStep = document.getElementById('title')
-var myProcess = document.getElementById('process')
-var imageArray = ['img/teaBag.svg','img/teaBlack.svg','img/teaMilk.svg','img/teaMix.svg','img/teaCup.svg'];
-var processArray = ['get cup','put in the teabag','pour hot water','add milk','mix it up'];
-var stepArray = ['Step One','Step Two','Step Three','Step Four','Step Five'];
-var arrayIndex = 0
+var startImage = document.getElementById('startImg');
+var nextImage = document.getElementById('nextImg');
+var myStep = document.getElementById('title');
+var myProcess = document.getElementById('process');
+var imageArray = [
+	'img/teaBag.svg',
+	'img/teaBlack.svg',
+	'img/teaMilk.svg',
+	'img/teaMix.svg',
+	'img/teaCup.svg',
+];
+var processArray = [
+	'get cup',
+	'put in the teabag',
+	'pour hot water',
+	'add milk',
+	'mix it up',
+];
+var stepArray = [
+	'Step One',
+	'Step Two',
+	'Step Three',
+	'Step Four',
+	'Step Five',
+];
+var arrayIndex = 0;
 
 function changeImage() {
-    myImage.setAttribute ('src',imageArray[arrayIndex]);
-    arrayIndex = (arrayIndex + 1) % imageArray.length;
+	startImage.setAttribute('src', imageArray[arrayIndex]);
+	arrayIndex = (arrayIndex + 1) % imageArray.length;
+	startImage.classList.toggle('opaque');
+	nextImage.classList.toggle('opaque');
 }
 
-function changeProcess () {
-	myProcess.innerHTML = (processArray[arrayIndex]);
+function changeProcess() {
+	myProcess.innerHTML = processArray[arrayIndex];
 }
 
 function changeStep() {
-	myStep.innerHTML = (stepArray[arrayIndex]);
+	myStep.innerHTML = stepArray[arrayIndex];
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -25,9 +46,5 @@ document.addEventListener('DOMContentLoaded', function () {
 		changeImage();
 		changeProcess();
 		changeStep();
-		});
 	});
-<<<<<<< HEAD
 });
-=======
->>>>>>> de782ceb1e0c2665ca374896b5efd376ee1eb19f

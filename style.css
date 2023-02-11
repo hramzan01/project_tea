@@ -14,6 +14,7 @@
 }
 
 .selected {
+	display: inline-block;
 	padding: 2%;
 	border-radius: 5%;
 	width: 30vw;
@@ -28,6 +29,11 @@
 	align-content: center;
 }
 
+#nextImg {
+	width: 40vw;
+	height: 20vh;
+	align-content: center;
+}
 #images_controls span {
 	cursor: pointer;
 }
