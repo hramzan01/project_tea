@@ -14,18 +14,3 @@ document.addEventListener('DOMContentLoaded', function () {
 		changeImage();
 	});
 });
-
-// convert the below jquery to vanilla javascript!!
-
-// $(document).ready(function() {
-//   $("#images_controls").on('click', 'span', function() {
-//     $("#images img").removeClass("opaque");
-
-//     var newImage = $(this).index();
-
-//     $("#images img").eq(newImage).addClass("opaque");
-
-//     $("#images_controls span").removeClass("selected");
-//     $(this).addClass("selected");
-//   });
-// });
