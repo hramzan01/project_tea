@@ -4,38 +4,39 @@ var bothImages = document.querySelectorAll('img');
 var myStep = document.getElementById('title');
 var myProcess = document.getElementById('process');
 var imageArray = [
+	'img/teaCup.svg',
 	'img/teaBag.svg',
 	'img/teaBlack.svg',
 	'img/teaMilk.svg',
 	'img/teaMix.svg',
-	'img/teaCup.svg',
 ];
 var processArray = [
-	'get cup',
 	'put in the teabag',
 	'pour hot water',
 	'add milk',
 	'mix it up',
+	'get cup',
 ];
 var stepArray = [
-	'Step One',
 	'Step Two',
 	'Step Three',
 	'Step Four',
 	'Step Five',
+	'Step One',
 ];
 var arrayIndex = 0;
 
-// if image is transparent select next img
+function toggleFade() {
+	bothImages.forEach(img => { 
+	img.classList.toggle('opaque')});
+}
 
 function changeImage() {
-	
-	// startImage.setAttribute('src', imageArray[arrayIndex]);
-	// nextImage.setAttribute('src', imageArray[arrayIndex]);
-	// bothImages.setAttribute('src', imageArray[arrayIndex]);
 	arrayIndex = (arrayIndex + 1) % imageArray.length;
 	bothImages.forEach(img => { 
-	img.classList.toggle('opaque')})
+		if (img.classList.contains('opaque')) {
+		img.setAttribute('src', imageArray[arrayIndex])}
+	});
 }
 
 function changeProcess() {
@@ -49,8 +50,9 @@ function changeStep() {
 document.addEventListener('DOMContentLoaded', function () {
 	var button = document.querySelector('#button');
 	button.addEventListener('click', function () {
-		changeImage();
+		toggleFade();
 		changeProcess();
 		changeStep();
+		changeImage();
 	});
 });
