@@ -27,15 +27,17 @@ var stepArray = [
 var arrayIndex = 0;
 
 function toggleFade() {
-	bothImages.forEach(img => { 
-	img.classList.toggle('opaque')});
+	bothImages.forEach((img) => {
+		img.classList.toggle('opaque');
+	});
 }
 
 function changeImage() {
 	arrayIndex = (arrayIndex + 1) % imageArray.length;
-	bothImages.forEach(img => { 
+	bothImages.forEach((img) => {
 		if (img.classList.contains('opaque')) {
-		img.setAttribute('src', imageArray[arrayIndex])}
+			img.setAttribute('src', imageArray[arrayIndex]);
+		}
 	});
 }
 
@@ -50,9 +52,9 @@ function changeStep() {
 document.addEventListener('DOMContentLoaded', function () {
 	var button = document.querySelector('#button');
 	button.addEventListener('click', function () {
+		changeImage();
 		toggleFade();
 		changeProcess();
 		changeStep();
-		changeImage();
 	});
 });
