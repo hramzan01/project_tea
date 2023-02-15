@@ -52,9 +52,9 @@ function changeStep() {
 document.addEventListener('DOMContentLoaded', function () {
 	var button = document.querySelector('#button');
 	button.addEventListener('click', function () {
-		changeImage();
 		toggleFade();
 		changeProcess();
 		changeStep();
+		changeImage();
 	});
 });
