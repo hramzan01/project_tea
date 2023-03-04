@@ -1,59 +1,34 @@
-:root {
-	padding: 10%;
-	text-align: center;
-	font-size: x-large;
-	font-family: Arial, Helvetica, sans-serif;
+#container {
+	display: grid;
+	grid-template: 'a' 1fr 'b' 1fr 'c' 1fr 'd' 1fr / [col-start] 1fr [col-end];
+	height: 100vh;
+}
+
+.item {
+	display: grid;
+	border: 1px solid black;
+	justify-content: center;
+	align-items: center;
 }
 
 #title {
-	font-weight: 700;
+	grid-area: a;
+}
+
+#process {
+	grid-area: b;
 }
 
 #button {
-	text-align: center;
-	padding: 8%;
+	grid-area: d;
 }
 
-.selected {
-	display: inline-block;
-	padding: 2%;
-	border-radius: 5%;
-	width: 30vw;
-	cursor: pointer;
-	align-items: center;
-	text-align: center;
-}
-
-#startImg {
-	width: 40vw;
-	height: 20vh;
-	align-content: center;
-}
-
-#nextImg {
-	width: 40vw;
-	height: 20vh;
-	align-content: center;
-}
-#images_controls span {
-	cursor: pointer;
-}
-
-#images {
-	display: inline-block;
-	position: relative;
-	margin-left: 0;
-	margin-right: 0;
-	padding: 25%;
-	text-align: center;
-}
-
-#images img {
-	position: absolute;
-	left: 0;
+img {
+	position: center;
 	transition: opacity 1s ease-in-out;
 	opacity: 0;
 	filter: alpha(opacity=0);
+	grid-area: c;
 }
 
 #images img.opaque {
