@@ -17,13 +17,7 @@ var processArray = [
 	'mix it up',
 	'get cup',
 ];
-var stepArray = [
-	'Step Two',
-	'Step Three',
-	'Step Four',
-	'Step Five',
-	'Step One',
-];
+var stepArray = ['Step 02', 'Step 03', 'Step 04', 'Step 05', 'Step 01'];
 var arrayIndex = 0;
 
 function toggleFade() {
