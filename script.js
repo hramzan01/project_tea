@@ -1,3 +1,16 @@
+// home script
+document.addEventListener('mousemove', parallax);
+function parallax(event) {
+	this.querySelectorAll('.parallax-wrap span').forEach((shift) => {
+		const position = shift.getAttribute('value');
+		const x = (window.innerWidth - event.pageX * position) / 90;
+		const y = (window.innerHeight - event.pageY * position) / 90;
+
+		shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+	});
+}
+
+// app script
 var startImage = document.getElementById('startImg');
 var nextImage = document.getElementById('nextImg');
 var bothImages = document.querySelectorAll('img');
@@ -50,5 +63,28 @@ document.addEventListener('DOMContentLoaded', function () {
 		changeProcess();
 		changeStep();
 		changeImage();
+	});
+});
+
+// Change page
+function renderHome() {
+	window.location = '/home.html';
+}
+
+function renderApp() {
+	window.location = '/app.html';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+	var button = document.querySelector('#home');
+	button.addEventListener('click', function () {
+		renderHome();
+	});
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+	var button = document.querySelector('#startButton');
+	button.addEventListener('click', function () {
+		renderApp();
 	});
 });

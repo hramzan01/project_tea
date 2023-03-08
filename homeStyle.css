@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: poppins;
+}
+
+body {
+	background-image: url('img/sky.svg');
+	background-position: center;
+}
+
+button {
+	position: absolute;
+	top: 87vh;
+	right: 10vw;
+	z-index: 5;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	transition: ease-in-out 0.2s;
+}
+
+button:hover {
+	cursor: pointer;
+	transform: scale(90%);
+}
+
+.parallax-wrap {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.parallax-wrap span {
+	height: 20vh;
+	width: 40vw;
+	position: absolute;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.parallax-wrap span:nth-child(1) {
+	top: 47%;
+	left: 30%;
+	height: 30vh;
+	z-index: 3;
+	background-image: url('img/clouds.svg');
+}
+
+.parallax-wrap span:nth-child(2) {
+	top: 40%;
+	left: 15%;
+	z-index: 3;
+	background-image: url('img/clouds.svg');
+}
+
+.parallax-wrap span:nth-child(3) {
+	top: 35%;
+	left: 50%;
+	z-index: 3;
+	background-image: url('img/clouds.svg');
+}
+
+.parallax-wrap span:nth-child(4) {
+	top: 0%;
+	left: 0%;
+	z-index: 4;
+	height: 100vh;
+	width: 100vw;
+	background-image: url('img/window.svg');
+	background-size: cover;
+}
+
+.parallax-wrap span:nth-child(5) {
+	top: 65%;
+	left: 20%;
+	z-index: 5;
+	background-image: url('img/teaCup.svg');
+	height: 200px;
+}
