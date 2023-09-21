@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Change page
 function renderHome() {
-	window.location = '/index.html';
+	window.location = './index.html';
 }
 
 function renderApp() {
-	window.location = '/app.html';
+	window.location = './app.html';
 }
 
 document.addEventListener('DOMContentLoaded', function () {
